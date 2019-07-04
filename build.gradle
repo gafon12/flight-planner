@@ -1,13 +1,14 @@
 plugins {
 	id 'org.springframework.boot' version '2.2.0.BUILD-SNAPSHOT'
 	id 'java'
+	id 'checkstyle'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
 group = 'io.codelex'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '10'
 
 repositories {
 	mavenCentral()
@@ -27,4 +28,9 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+checkstyle {
+	toolVersion = "8.17"
+	maxWarnings = 0
 }
